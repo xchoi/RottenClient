@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>62FFD9AE-8CFF-4305-9732-27A7562BFEE8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RottenClient</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0554324F07ABC7DE80771DA55D1EAD8CFB6A9509</key>
+		<string>https://github.com/xchoi/RottenClient.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RottenClient.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0554324F07ABC7DE80771DA55D1EAD8CFB6A9509</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/xchoi/RottenClient.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0554324F07ABC7DE80771DA55D1EAD8CFB6A9509</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0554324F07ABC7DE80771DA55D1EAD8CFB6A9509</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RottenClient</string>
+		</dict>
+	</array>
+</dict>
+</plist>
