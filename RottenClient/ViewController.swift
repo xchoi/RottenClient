@@ -10,41 +10,20 @@ import UIKit
 //import LLARingSpinnerView
 
 class ViewController: UIViewController, UITableViewDataSource {
-
     @IBOutlet weak var movieTableView: UITableView!
     var moviesArray: NSArray?
     var imageCache = [String : UIImage]()
-//    var spinner: UIView?
-//    var spinner = LLARingSpinnerView()
-    
+    var refreshControl: UIRefreshControl!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let YourApiKey = "duaw9v2zg9h2grgc9dyzk3gq"
-        let RottenTomatoesURLString = "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=" + YourApiKey
-        let request = NSMutableURLRequest(URL: NSURL.URLWithString(RottenTomatoesURLString))
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler:{ (response, data, error) in
-            
-//            RTSpinKitView *spinner = [[RTSpinKitView alloc] initWithStyle:RTSpinKitViewStyleWave];
-//            [self.view addSubview:spinner];
-            
-//            self.view.addSubview(view: self.spinner as UIView)
-//            self.spinner.
-            
-//            if self.spinner == nil {
-//                self.spinner = RTSpinKitView(initWithStyle: .RT
-//            }
-//            var spinner = RTS
-//            self.spinner = LLARingSpinnerView
-            
-            var errorValue: NSError? = nil
-            let dictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &errorValue) as NSDictionary
-            
-            self.moviesArray = (dictionary["movies"] as? NSArray)
-
-            self.movieTableView.reloadData()
-            
-            
-        })
+        
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refersh")
+        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.movieTableView.addSubview(refreshControl)
+        
+        self.refresh(self)
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -98,7 +77,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         return cell
     }
 
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         let selectedCell = sender as UITableViewCell
         let selectedIndex = self.movieTableView!.indexPathForSelectedRow()
@@ -109,6 +88,22 @@ class ViewController: UIViewController, UITableViewDataSource {
 
             movieDetailController.movie = MovieModel(fromNSDictionary: movieDictionary)
         }
+    }
+
+    func refresh(sender:AnyObject) {
+        let YourApiKey = "duaw9v2zg9h2grgc9dyzk3gq"
+        let RottenTomatoesURLString = "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=" + YourApiKey
+        let request = NSMutableURLRequest(URL: NSURL.URLWithString(RottenTomatoesURLString))
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler:{ (response, data, error) in
+            
+            var errorValue: NSError? = nil
+            let dictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &errorValue) as NSDictionary
+            
+            self.moviesArray = (dictionary["movies"] as? NSArray)
+            
+            self.movieTableView.reloadData()
+            self.refreshControl.endRefreshing()
+        })
     }
 }
 
