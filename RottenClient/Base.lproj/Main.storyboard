@@ -22,8 +22,12 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="51X-fS-ncl" id="ifJ-sw-ave">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="gTW-t1-Qd2">
+                                                    <rect key="frame" x="8" y="11" width="63" height="82"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Movie Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pa6-ND-8Sw">
-                                                    <rect key="frame" x="8" y="20" width="348" height="21"/>
+                                                    <rect key="frame" x="79" y="38" width="348" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -32,6 +36,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="imageView" destination="gTW-t1-Qd2" id="YdH-n9-z5g"/>
                                             <outlet property="titleLabel" destination="Pa6-ND-8Sw" id="OQK-vR-yHM"/>
                                             <segue destination="kx6-9D-y12" kind="push" id="C5O-LH-ipj"/>
                                         </connections>

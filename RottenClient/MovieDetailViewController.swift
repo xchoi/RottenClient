@@ -10,7 +10,7 @@ import UIKit
 
 class MovieDetailViewController: UIViewController {
 
-    var movieDetails: NSDictionary?
+    var movie: MovieModel?
     
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var movieDescriptionTextView: UITextView!
@@ -22,14 +22,14 @@ class MovieDetailViewController: UIViewController {
 
         println("viewDidLoad")
         
-        if movieDetails != nil {
+        if movie != nil {
             
             println("view did load movie dtails")
             
-            movieTitleLabel.text =          movieDetails?["title"] as NSString
-            movieScoreLabel.text =          String((movieDetails?["ratings"] as NSDictionary)["critics_score"] as NSInteger)
-            movieDescriptionTextView.text =    movieDetails?["synopsis"] as NSString
-            movieRatingLabel.text =         movieDetails?["mpaa_rating"] as NSString
+            movieTitleLabel.text =          movie?.title
+            movieScoreLabel.text =          movie?.criticsScore()
+            movieDescriptionTextView.text =    movie?.description
+            movieRatingLabel.text =         movie?.rating
         }
     }
 
