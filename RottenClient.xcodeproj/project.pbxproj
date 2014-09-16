@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		570385A819C4EED40072E96C /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570385A719C4EED40072E96C /* MovieTableViewCell.swift */; };
 		570385AA19C509CE0072E96C /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570385A919C509CE0072E96C /* MovieDetailViewController.swift */; };
+		570385AD19C62CCA0072E96C /* Poster128.png in Resources */ = {isa = PBXBuildFile; fileRef = 570385AC19C62CCA0072E96C /* Poster128.png */; };
+		570385AF19C6400E0072E96C /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570385AE19C6400E0072E96C /* MovieModel.swift */; };
 		57BF848119C3F47500E9C0BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BF848019C3F47500E9C0BD /* AppDelegate.swift */; };
 		57BF848319C3F47500E9C0BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BF848219C3F47500E9C0BD /* ViewController.swift */; };
 		57BF848619C3F47500E9C0BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57BF848419C3F47500E9C0BD /* Main.storyboard */; };
 		57BF848819C3F47500E9C0BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57BF848719C3F47500E9C0BD /* Images.xcassets */; };
 		57BF848B19C3F47500E9C0BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57BF848919C3F47500E9C0BD /* LaunchScreen.xib */; };
 		57BF849719C3F47500E9C0BD /* RottenClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BF849619C3F47500E9C0BD /* RottenClientTests.swift */; };
+		57F8152E19C8130B00E5C00E /* warning-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 57F8152D19C8130B00E5C00E /* warning-icon.png */; };
 		77A9F90B36934A67B52953EF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09AED50196884A2393209402 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +35,9 @@
 		09AED50196884A2393209402 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		570385A719C4EED40072E96C /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		570385A919C509CE0072E96C /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
-		570385AB19C5F5CA0072E96C /* RottenClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RottenClient-Bridging-Header.h"; sourceTree = "<group>"; };
+		570385AC19C62CCA0072E96C /* Poster128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Poster128.png; sourceTree = "<group>"; };
+		570385AE19C6400E0072E96C /* MovieModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		579DD1C319C732B20062B18A /* RottenClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RottenClient-Bridging-Header.h"; sourceTree = "<group>"; };
 		57BF847B19C3F47500E9C0BD /* RottenClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RottenClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57BF847F19C3F47500E9C0BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57BF848019C3F47500E9C0BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +48,7 @@
 		57BF849019C3F47500E9C0BD /* RottenClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RottenClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57BF849519C3F47500E9C0BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57BF849619C3F47500E9C0BD /* RottenClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RottenClientTests.swift; sourceTree = "<group>"; };
+		57F8152D19C8130B00E5C00E /* warning-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warning-icon.png"; sourceTree = "<group>"; };
 		6779E6ADD8BD4C949D32BA76 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,12 +82,12 @@
 		57BF847219C3F47500E9C0BD = {
 			isa = PBXGroup;
 			children = (
-				570385AB19C5F5CA0072E96C /* RottenClient-Bridging-Header.h */,
 				57BF847D19C3F47500E9C0BD /* RottenClient */,
 				57BF849319C3F47500E9C0BD /* RottenClientTests */,
 				57BF847C19C3F47500E9C0BD /* Products */,
 				6779E6ADD8BD4C949D32BA76 /* Pods.xcconfig */,
 				3826FAD1A59B4D979DEE64D8 /* Frameworks */,
+				579DD1C319C732B20062B18A /* RottenClient-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +105,15 @@
 			children = (
 				57BF848019C3F47500E9C0BD /* AppDelegate.swift */,
 				57BF848219C3F47500E9C0BD /* ViewController.swift */,
+				570385AE19C6400E0072E96C /* MovieModel.swift */,
 				57BF848419C3F47500E9C0BD /* Main.storyboard */,
 				570385A919C509CE0072E96C /* MovieDetailViewController.swift */,
 				57BF848719C3F47500E9C0BD /* Images.xcassets */,
 				57BF848919C3F47500E9C0BD /* LaunchScreen.xib */,
 				57BF847E19C3F47500E9C0BD /* Supporting Files */,
 				570385A719C4EED40072E96C /* MovieTableViewCell.swift */,
+				570385AC19C62CCA0072E96C /* Poster128.png */,
+				57F8152D19C8130B00E5C00E /* warning-icon.png */,
 			);
 			path = RottenClient;
 			sourceTree = "<group>";
@@ -216,6 +225,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57F8152E19C8130B00E5C00E /* warning-icon.png in Resources */,
+				570385AD19C62CCA0072E96C /* Poster128.png in Resources */,
 				57BF848619C3F47500E9C0BD /* Main.storyboard in Resources */,
 				57BF848B19C3F47500E9C0BD /* LaunchScreen.xib in Resources */,
 				57BF848819C3F47500E9C0BD /* Images.xcassets in Resources */,
@@ -271,6 +282,7 @@
 			files = (
 				570385AA19C509CE0072E96C /* MovieDetailViewController.swift in Sources */,
 				57BF848319C3F47500E9C0BD /* ViewController.swift in Sources */,
+				570385AF19C6400E0072E96C /* MovieModel.swift in Sources */,
 				57BF848119C3F47500E9C0BD /* AppDelegate.swift in Sources */,
 				570385A819C4EED40072E96C /* MovieTableViewCell.swift in Sources */,
 			);
@@ -396,9 +408,12 @@
 			baseConfigurationReference = 6779E6ADD8BD4C949D32BA76 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RottenClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RottenClient-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -407,9 +422,11 @@
 			baseConfigurationReference = 6779E6ADD8BD4C949D32BA76 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RottenClient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RottenClient-Bridging-Header.h";
 			};
 			name = Release;
 		};

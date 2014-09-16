@@ -10,5 +10,8 @@
 #define RottenClient_RottenClient_Bridging_Header_h
 
 #import <AFNetworking/AFNetworking.h>
+#import <LLARingSpinnerView/LLARingSpinnerView.h>
+#import <TSMessages/TSMessage.h>
+#import <TSMessages/TSMessageView.h>
 
 #endif

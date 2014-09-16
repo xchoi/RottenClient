@@ -18,11 +18,20 @@ PODS:
   - AFNetworking/UIKit (2.2.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - HexColors (2.2.1)
+  - LLARingSpinnerView (0.1.1)
+  - TSMessages (0.9.10):
+    - HexColors
 
 DEPENDENCIES:
   - AFNetworking (~> 2.2.4)
+  - LLARingSpinnerView
+  - TSMessages
 
 SPEC CHECKSUMS:
   AFNetworking: ab63e259fe91eef4519b371ef0a4955af0e73e64
+  HexColors: 01384d2bbe8dc4ffa43c3b4135db6e976952d153
+  LLARingSpinnerView: 9fe22231850244fee06241b98b22f8f60813a307
+  TSMessages: 8598a0645e9d54847f6e5f3b070bef39c493bbf8
 
 COCOAPODS: 0.33.1

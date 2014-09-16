@@ -7,16 +7,23 @@
 //
 
 import UIKit
-//import LLARingSpinnerView
 
 class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var movieTableView: UITableView!
     var moviesArray: NSArray?
     var imageCache = [String : UIImage]()
     var refreshControl: UIRefreshControl!
+    var spinnerView: LLARingSpinnerView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.spinnerView = LLARingSpinnerView(frame: CGRectMake(CGRectGetMidX(self.view.frame) - 20,
+            CGRectGetMidY(self.view.frame) - 20, 40, 40))
+        self.spinnerView?.lineWidth = 2.5
+        self.spinnerView?.tintColor = UIColor.redColor()
+        self.movieTableView?.addSubview(spinnerView!)
+        self.spinnerView?.startAnimating()
         
         self.refreshControl = UIRefreshControl()
         self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refersh")
@@ -97,12 +104,32 @@ class ViewController: UIViewController, UITableViewDataSource {
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler:{ (response, data, error) in
             
             var errorValue: NSError? = nil
-            let dictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &errorValue) as NSDictionary
             
-            self.moviesArray = (dictionary["movies"] as? NSArray)
+            if error != nil {
+                
+                TSMessage.showNotificationInViewController(
+                    self,
+                    title: "Network Error",
+                    subtitle: "",
+                    type: TSMessageNotificationType.Error,
+                    duration: NSTimeInterval(2.0),
+                    canBeDismissedByUser: false
+                )
+                
+            } else {
+                
+                
+                
+                let dictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: &errorValue) as NSDictionary
             
-            self.movieTableView.reloadData()
+                self.moviesArray = (dictionary["movies"] as? NSArray)
+            
+                self.movieTableView.reloadData()
+            }
             self.refreshControl.endRefreshing()
+            self.spinnerView?.stopAnimating()
+            self.spinnerView?.hidden = true
+            
         })
     }
 }
