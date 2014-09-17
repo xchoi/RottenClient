@@ -16,6 +16,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var movieDescriptionTextView: UITextView!
     @IBOutlet weak var movieScoreLabel: UILabel!
     @IBOutlet weak var movieRatingLabel: UILabel!
+    @IBOutlet weak var movieImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,21 @@ class MovieDetailViewController: UIViewController {
             movieScoreLabel.text =          movie?.criticsScore()
             movieDescriptionTextView.text =    movie?.description
             movieRatingLabel.text =         movie?.rating
+            
+            let imgURL = NSURL(string: movie!.posterThumbnailUrl() as String)
+            
+            // Download an NSData representation of the image at the URL
+            let request: NSURLRequest = NSURLRequest(URL: imgURL)
+            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
+                if error == nil {
+                    let image = UIImage(data: data)
+                    
+                    self.movieImageView?.image = image
+                }
+                else {
+                    println("Error: \(error.localizedDescription)")
+                }
+            })
         }
     }
 

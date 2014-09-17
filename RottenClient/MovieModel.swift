@@ -32,7 +32,7 @@ class MovieModel {
     }
     
     func posterThumbnailUrl() -> NSString {
-        return String((rawHash["posters"] as NSDictionary)["thumbnail"] as String)
+        return String(((rawHash["posters"] as NSDictionary)["thumbnail"] as String).stringByReplacingOccurrencesOfString("tmb", withString: "ori"))
     }
     
 }
